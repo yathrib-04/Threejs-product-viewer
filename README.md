@@ -1,4 +1,4 @@
-# Interactive THreejs Product Viewer
+# Interactive Threejs Product Viewer
 
 An interactive 3D product viewer built with Three.js that allows users to explore a chair model with mouse interactions and automatic camera rotation.
 
@@ -30,7 +30,7 @@ An interactive 3D product viewer built with Three.js that allows users to explor
 
 1. Clone the repository:
    ```bash
-   git clone [repository-url]
+   git clone [https://github.com/yathrib-04/Threejs-product-viewer]
    ```
 
 2. Navigate to the project directory:
@@ -78,19 +78,3 @@ An interactive 3D product viewer built with Three.js that allows users to explor
 
 - Three.js (v0.157.0)
 - ES Module Shims (v1.8.0)
-
-## Future Improvements
-
-- Add more product models
-- Implement texture support
-- Add animation controls
-- Include measurement tools
-- Add export functionality
-
-## Contributing
-
-Feel free to submit issues and enhancement requests!
-
-## License
-
-This project is licensed under the MIT License - see the LICENSE file for details. 
