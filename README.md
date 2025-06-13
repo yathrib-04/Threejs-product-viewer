@@ -1,4 +1,4 @@
-# Interactive 3D Product Viewer
+# Interactive THreejs Product Viewer
 
 An interactive 3D product viewer built with Three.js that allows users to explore a chair model with mouse interactions and automatic camera rotation.
 
@@ -25,20 +25,6 @@ An interactive 3D product viewer built with Three.js that allows users to explor
   - Ambient and directional lighting
   - Smooth animations and transitions
   - Part highlighting and feedback effects
-
-## Project Structure
-
-```
-├── index.html          # Main HTML file
-├── js/
-│   ├── main.js         # Main application entry point
-│   ├── initScene.js    # Scene, camera, and renderer setup
-│   ├── createProduct.js # Chair model creation
-│   ├── addLighting.js  # Lighting setup
-│   ├── interaction.js  # Mouse interaction handling
-│   └── cameraAnimation.js # Camera rotation animation
-└── README.md          # Project documentation
-```
 
 ## Setup and Installation
 
