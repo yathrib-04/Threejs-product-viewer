@@ -13,7 +13,7 @@ const product = createProduct();
 scene.add(product);
 addLighting(scene);
 setupInteraction(scene, camera);
-// const updateCamera = setupCameraAnimation(camera, controls, scene);
+const updateCamera = setupCameraAnimation(camera, controls, scene);
 
 // Main animation loop for continuous rendering
 function animate() {

@@ -3,9 +3,9 @@ import * as THREE from 'three';
 export function setupCameraAnimation(camera, controls, scene) {
     const state = {
         radius: 7,                // Distance from center
-        height: 2,                // Camera height
+        height: 5,                // Camera height
         theta: 0,                 // Angle in radians
-        rotationSpeed: 0.8,       // Revolutions per second
+        rotationSpeed: 0.1,       // Revolutions per second
         isAutoRotating: true,
         lastTime: performance.now()
     };

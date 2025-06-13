@@ -23,13 +23,22 @@ export function setupInteraction(scene, camera) {
         if (object && originalColors.has(object)) {
             object.material.color.copy(originalColors.get(object));
             object.scale.copy(originalScales.get(object));
+            object.material.emissive.setHex(0x000000);
         }
     }
 
     function highlightObject(object) {
         // Apply hover highlight effect
         if (object) {
+            // Add emissive glow
             object.material.emissive.setHex(0x333333);
+            // Slight scale up
+            const originalScale = originalScales.get(object);
+            object.scale.set(
+                originalScale.x * 1.05,
+                originalScale.y * 1.05,
+                originalScale.z * 1.05
+            );
         }
     }
 
@@ -39,12 +48,16 @@ export function setupInteraction(scene, camera) {
         // Store original color
         const originalColor = object.material.color.clone();
         
-        // Change color
-        object.material.color.setHex(0xff0000);
+        // Change color to a bright red
+        object.material.color.setHex(0xff3333);
         
         // Scale effect
-        const originalScale = object.scale.clone();
-        object.scale.multiplyScalar(1.2);
+        const originalScale = originalScales.get(object);
+        object.scale.set(
+            originalScale.x * 1.2,
+            originalScale.y * 1.2,
+            originalScale.z * 1.2
+        );
         
         // Reset after animation
         setTimeout(() => {
@@ -68,7 +81,11 @@ export function setupInteraction(scene, camera) {
         if (intersects.length > 0) {
             hoveredObject = intersects[0].object;
             highlightObject(hoveredObject);
+            
+            // Update info panel position and content
             infoPanel.style.display = 'block';
+            infoPanel.style.left = (event.clientX + 15) + 'px';
+            infoPanel.style.top = (event.clientY + 15) + 'px';
             partName.textContent = hoveredObject.name;
         } else {
             hoveredObject = null;

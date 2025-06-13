@@ -13,7 +13,7 @@ export function initScene() {
     document.body.appendChild(renderer.domElement);
     
     // Initial camera position
-    camera.position.set(5, 2, 5);
+    camera.position.set(3, 2, 3);
     camera.lookAt(0, 0, 0);
     
     const controls = new OrbitControls(camera, renderer.domElement);
